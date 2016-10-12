@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Sidebar from './Sidebar'
+import Sidebar from './Sidebar';
+import Mainbar from './Mainbar';
 
 export default class App extends Component {
   render() {
@@ -8,7 +9,7 @@ export default class App extends Component {
         <h1>Welcome to the documentation</h1>
         <div className="container">
         <Sidebar />
-          {this.props.children}
+        <Mainbar />
         </div>
       </div>
     );
