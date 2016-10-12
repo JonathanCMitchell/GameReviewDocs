@@ -7,6 +7,7 @@ export default class App extends Component {
       <div>
         <h1>Welcome to the documentation</h1>
         <div className="container">
+        <Sidebar />
           {this.props.children}
         </div>
       </div>

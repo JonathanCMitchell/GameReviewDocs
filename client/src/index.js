@@ -4,6 +4,7 @@ import { Router, browserHistory } from 'react-router';
 
 // routes
 import routes from './routes';
+const styles = require('../assets/styles/main.scss');
 
 
 ReactDOM.render(
