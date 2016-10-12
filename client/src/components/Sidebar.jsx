@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import Sidebar from './Sidebar'
 
-export default class App extends Component {
+export default class Sidebar extends Component {
   render() {
     return (
       <div>
-        <h1>Welcome to the documentation</h1>
+        <h1>Welcome to the Sidebar</h1>
         <div className="container">
-          {this.props.children}
         </div>
       </div>
     );
   }
 }
+
+export default Sidebar;
