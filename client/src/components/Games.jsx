@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import FlatButton from 'material-ui/FlatButton';
 import GamesTable from './GamesTable';
 import Paper from 'material-ui/Paper';
-
+import GamesSandbox from './GamesSandbox';
 
 
 
@@ -18,6 +18,7 @@ class Games extends Component {
       <GamesTable/>
       <FlatButton label="Action1" />
       <FlatButton label="Action2" />
+      <GamesSandbox />
     </div>
       )
   }

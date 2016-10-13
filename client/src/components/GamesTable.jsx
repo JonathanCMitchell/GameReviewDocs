@@ -26,7 +26,7 @@ const GamesTable = (props) => {
         <TableRowColumn>11111</TableRowColumn>
       </TableRow>
       <TableRow striped={true}>
-        <TableRowColumn>score_range•</TableRowColumn>
+        <TableRowColumn>score_range</TableRowColumn>
         <TableRowColumn>Query</TableRowColumn>
         <TableRowColumn>Range (1 - 10)</TableRowColumn>
         <TableRowColumn>Yes</TableRowColumn>
