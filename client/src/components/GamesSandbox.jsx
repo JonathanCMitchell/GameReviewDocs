@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import Divider from 'material-ui/Divider';
-import cache  from '../../data/cache'
+import cache  from '../../data/cache';
 class GamesSandbox extends Component {
   constructor(props) {
     super(props);
@@ -17,8 +17,9 @@ class GamesSandbox extends Component {
     };
     this.onTitleChange = this.onTitleChange.bind(this);
     this.onScoreRangeChange = this.onScoreRangeChange.bind(this);
-    this.onScoreChange = this.onScoreChange.bind(this)
+    this.onScoreChange = this.onScoreChange.bind(this);
     this.onEditorsChoiceChange = this.onEditorsChoiceChange.bind(this);
+    this.onReleaseYearChange = this.onReleaseYearChange.bind(this);
   }
   onTitleChange(event) {
     const regex = /^[A-Z]/; // limits string length, min 1, max 50, letters only
@@ -62,7 +63,7 @@ class GamesSandbox extends Component {
   onEditorsChoiceChange(event) {
     const regex = /^1|0$/g;
     this.setState({
-      editors_choice: event.target.value
+      editors_choice: event.target.value,
     });
     if (regex.test(event.target.value)) {
       this.setState({ errorEditorsChoice: '' });
@@ -71,7 +72,7 @@ class GamesSandbox extends Component {
     }
   }
   onReleaseYearChange(event) {
-    const regex = /^(199\d|200\d|2010)$/
+    const regex = /^(199[6-9]|200[0-9])|(201[0-6])$/;
     this.setState({
       release_year: event.target.value,
     });
@@ -128,12 +129,12 @@ class GamesSandbox extends Component {
             underlineShow={false}
           />
           <TextField
-            floatingLabelText="title"
-            className="title-input-text"
-            onChange={this.onTitleChange}
-            value={this.state.title}
+            floatingLabelText="release_year"
+            className="title-release_year-text"
+            onChange={this.onReleaseYearChange}
+            value={this.state.release_year}
             hintText="Title"
-            errorText={this.state.errorTitle}
+            errorText={this.state.errorReleaseYear}
             underlineShow={false}
           />
          
