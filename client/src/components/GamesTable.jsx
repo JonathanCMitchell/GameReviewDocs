@@ -79,7 +79,7 @@ const GamesTable = (props) => {
         <TableRowColumn>Day of release</TableRowColumn>
         <TableRowColumn>No</TableRowColumn>
         <TableRowColumn>Integer</TableRowColumn>
-        <TableRowColumn>08</TableRowColumn>
+        <TableRowColumn>8</TableRowColumn>
       </TableRow>
     </TableBody>
   </Table>

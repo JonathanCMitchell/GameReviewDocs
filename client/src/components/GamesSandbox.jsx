@@ -10,16 +10,22 @@ class GamesSandbox extends Component {
       score_range: '',
       score: '',
       release_year: '',
+      release_month: '',
+      release_day: '',
       errorTitle: '',
       errorScoreRange: '',
       errorScore: '',
       errorReleaseYear: '',
+      errorReleaseMonth: '',
+      errorReleaseDay: '',
     };
     this.onTitleChange = this.onTitleChange.bind(this);
     this.onScoreRangeChange = this.onScoreRangeChange.bind(this);
     this.onScoreChange = this.onScoreChange.bind(this);
     this.onEditorsChoiceChange = this.onEditorsChoiceChange.bind(this);
     this.onReleaseYearChange = this.onReleaseYearChange.bind(this);
+    this.onReleaseMonthChange = this.onReleaseMonthChange.bind(this);
+    this.onReleaseDayChange = this.onReleaseDayChange.bind(this);
   }
   onTitleChange(event) {
     const regex = /^[A-Z]/; // limits string length, min 1, max 50, letters only
@@ -79,10 +85,33 @@ class GamesSandbox extends Component {
     if (regex.test(event.target.value)) {
       this.setState({ errorReleaseYear: '' });
     } else {
-      this.setState({ errorReleaseYear: 'Invalid release year parameter'});
+      this.setState({ errorReleaseYear: 'Invalid release year input'});
     }
   }
 
+  onReleaseMonthChange(event) {
+    const regex = /^(0?[1-9]|1[012])$/g;
+    this.setState({
+      release_month: event.target.value,
+    });
+    if (regex.test(event.target.value)) {
+      this.setState({ errorReleaseMonth: ''});
+    } else {
+      this.setState({ errorReleaseMonth: 'Invalid release_month input'});
+    }
+  }
+
+  onReleaseDayChange(event) {
+    const regex = /^([1-9]|[12]\d|3[0-1])$/g;
+    this.setState({
+      release_day: event.target.value,
+    });
+    if (regex.test(event.target.value)) {
+      this.setState({ errorReleaseDay: ''});
+    } else {
+      this.setState({ errorReleaseDay: 'Invalid release_day input'});
+    }
+  }
 
 
   render() {
@@ -128,16 +157,36 @@ class GamesSandbox extends Component {
             errorText={this.state.errorTitle}
             underlineShow={false}
           />
+          <Divider />
           <TextField
             floatingLabelText="release_year"
             className="title-release_year-text"
             onChange={this.onReleaseYearChange}
             value={this.state.release_year}
-            hintText="Title"
+            hintText="Release Year"
             errorText={this.state.errorReleaseYear}
             underlineShow={false}
           />
-         
+          <Divider />
+          <TextField
+            floatingLabelText="release_month"
+            className="title-release_month-text"
+            onChange={this.onReleaseMonthChange}
+            value={this.state.release_month}
+            hintText="Release Month"
+            errorText={this.state.errorReleaseMonth}
+            underlineShow={false}
+          />
+          <Divider />
+          <TextField
+            floatingLabelText="release_day"
+            className="title-release_day-text"
+            onChange={this.onReleaseDayChange}
+            value={this.state.release_day}
+            hintText="Release day"
+            errorText={this.state.errorReleaseDay}
+            underlineShow={false}
+          />
       </form>
       <h1>Hello we are inside GamesSandbox</h1>
       <p>This will be received data sandbox</p>
