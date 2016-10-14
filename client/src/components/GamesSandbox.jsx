@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
+import Paper from 'material-ui/Paper';
+import RaisedButton from 'material-ui/RaisedButton';
 import Divider from 'material-ui/Divider';
 import cache  from '../../data/cache';
+import axios from 'axios';
 class GamesSandbox extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +21,7 @@ class GamesSandbox extends Component {
       errorReleaseYear: '',
       errorReleaseMonth: '',
       errorReleaseDay: '',
+      data: '',
     };
     this.onTitleChange = this.onTitleChange.bind(this);
     this.onScoreRangeChange = this.onScoreRangeChange.bind(this);
@@ -26,7 +30,33 @@ class GamesSandbox extends Component {
     this.onReleaseYearChange = this.onReleaseYearChange.bind(this);
     this.onReleaseMonthChange = this.onReleaseMonthChange.bind(this);
     this.onReleaseDayChange = this.onReleaseDayChange.bind(this);
+    this.onFormSubmit = this.onFormSubmit.bind(this);
   }
+  onFormSubmit(event) {
+    event.preventDefault();
+      const options = {};
+      if (this.state.score_range)  options.score_range = this.state.score_range
+      if (this.state.score)  options.score = this.state.score;
+      if (this.state.title)  options.title = this.state.title;
+      if (this.state.release_year)  options.release_year = this.state.release_year;
+      if (this.state.release_month)  options.release_month = this.state.release_month;
+      if (this.state.release_day)  options.release_day = this.state.release_day;
+      if (this.state.score)  options.score = this.state.score;
+      if (this.state.score)  options.score = this.state.score;
+      const url = '/api/search/games/';
+      axios.get(url, options)
+      .then((data) => {
+        const received = JSON.stringify(data.data)
+        this.setState({
+          data: received
+        })
+      })
+      .catch((err) => {
+        if (err) console.log('error in get: ', err)
+      })
+  }
+
+
   onTitleChange(event) {
     const regex = /^[A-Z]/; // limits string length, min 1, max 50, letters only
     this.setState({
@@ -117,7 +147,8 @@ class GamesSandbox extends Component {
   render() {
     return (
       <div>
-      <form>
+      <form className="games-form" onSubmit={this.onFormSubmit}>
+        <Paper zDepth={1} className="games-docs">
         <TextField
             floatingLabelText="score_range"
             className="score_range-input-text"
@@ -188,9 +219,16 @@ class GamesSandbox extends Component {
             underlineShow={false}
           />
           <Divider />
+          </Paper>
+          <RaisedButton
+            type="submit"
+            label="Sign In"
+            labelStyle={{color: 'white'}}
+            backgroundColor='#677077'
+          />
       </form>
       <h1>Hello we are inside GamesSandbox</h1>
-      <p>This will be received data sandbox</p>
+      <p>{this.state.data}</p>
       </div>
       );
   }
