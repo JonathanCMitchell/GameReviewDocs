@@ -187,6 +187,7 @@ class GamesSandbox extends Component {
             errorText={this.state.errorReleaseDay}
             underlineShow={false}
           />
+          <Divider />
       </form>
       <h1>Hello we are inside GamesSandbox</h1>
       <p>This will be received data sandbox</p>
