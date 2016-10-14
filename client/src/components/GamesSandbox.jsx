@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import Divider from 'material-ui/Divider';
-
+import cache  from '../../data/cache'
 class GamesSandbox extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +26,8 @@ class GamesSandbox extends Component {
       title: event.target.value,
     });
 
-    if (regex.test(event.target.value)) {
+    if (cache[event.target.value]) {
+    // if (regex.test(event.target.value)) {
       this.setState({ errorTitle: '' });
     }
     else {
