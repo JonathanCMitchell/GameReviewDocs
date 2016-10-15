@@ -8,9 +8,9 @@ import _ from 'underscore';
 const dataArr = _.keys(cache)
 
 
-const GamesHeader = (props) => {  
+const GamesSearchbox = (props) => {  
   return (
-    <div className = "GamesHeader">
+    <div className = "SearchBox">
     <AutoComplete
       floatingLabelText="Search for available games"
       filter={AutoComplete.fuzzyFilter}
@@ -21,4 +21,4 @@ const GamesHeader = (props) => {
       )
 }
 
-export default GamesHeader;
+export default GamesSearchbox;

@@ -3,7 +3,7 @@ import FlatButton from 'material-ui/FlatButton';
 import Paper from 'material-ui/Paper';
 import GamesTable from './GamesTable';
 import GamesSandbox from './GamesSandbox';
-import GamesHeader from './GamesHeader';
+import GamesSearchbox from './GamesSearchbox';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Toggle from 'material-ui/Toggle';
 
@@ -40,9 +40,10 @@ class Games extends Component {
           avatar="../../assets/images/console_games_API_pic.png" 
           actAsExpander={true}
           showExpandableButton={true}
+          className="Card-Header"
         />
         
-        <CardText>
+        <CardText className="Slidebar">
           <Toggle
             toggled={this.state.expanded}
             onToggle={this.handleToggle}
@@ -53,10 +54,10 @@ class Games extends Component {
         <CardMedia
           expandable={true}
         >
-        <GamesHeader />
+        <GamesSearchbox/>
          <GamesTable/>
         </CardMedia>
-        <CardTitle title="Enter your parameters and try it out for yourself below." subtitle="Card subtitle" expandable={true} />
+        <CardTitle className="Card" title="Enter your parameters and try it out for yourself below." subtitle="Card subtitle" expandable={true} />
           <GamesSandbox expandable={true}/>
         <CardActions>
           <FlatButton label="Expand" onTouchTap={this.handleExpand} />

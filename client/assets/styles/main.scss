@@ -1,3 +1,14 @@
+
+/* Color Themes */
+
+/* Purle Lime Green Theme */
+$lime-green-light: #68EFAD;
+$lime-green-accent: #3EFFA1;
+$purple-light: #9B26AF;
+$purple-accent: #7A1EA1;
+$purple-dark: #691A99;
+
+
 .sidebar {
   background-color: blue;
 }
@@ -19,6 +30,87 @@ td {
 p {
   overflow: scroll;
 }
+
+/* Card Header  */
+.Card-Header {
+background-color: $lime-green-accent
+}
+
+
+/* Sidebar */
+.Slidebar {
+background-color: $purple-dark
+}
+
+/* Searchbox */
+.Searchbox {
+
+}
+
+/* Table */
+.Table-parameters {
+  
+  
+}
+
+/* Card */
+.Card {
+  background-color: pink
+}
+
+
+/* Sandbox */
+.Sandbox {
+  background: transparent;
+}
+
+/* Form */
+.Form {
+  background-color: $lime-green-accent;
+}
+
+/* Form inside */
+.Form-paper {
+  background-color: yellow
+}
+
+//color fixed
+.score_range-input-text {
+
+}
+/* Response */
+.games-response {  
+  width: 770px;
+  height: 539px;
+}
+
+.games-response-hidden {  
+  width: 770px;
+  height: 539px;
+  diplay:none;
+}
+
+/* Response inside */
+.games-response-inside {
+  background-color: pink;
+  overflow: scroll;
+  width: 740px;
+  height: 509px;
+}
+/* 
+.games_response_inside {
+  background-color: rgb(122, 0, 38);
+  position: absolute;
+  left: 615px;
+  top: 1096px;
+  width: 740px;
+  height: 509px;
+  z-index: 17;
+} */
+
+
+/* Expander */
+
 // .games-response {
 //     width: 720px;
 //     height: 355px;
@@ -30,3 +122,5 @@ p {
 .games-response-hidden {
   display: hidden
 }
+
+/* Tables */

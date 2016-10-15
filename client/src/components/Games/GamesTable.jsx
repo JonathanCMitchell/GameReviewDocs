@@ -4,7 +4,7 @@ import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColu
 
 const GamesTable = (props) => {
   return (
-    <div className="GamesTable-optional-parameters">
+    <div className="Table-parameters">
       <Table>
     <TableHeader displaySelectAll={false} enableSelectAll={false} adjustForCheckbox={false}>
       <TableRow>
