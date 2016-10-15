@@ -4,8 +4,9 @@ import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
 import FlatButton from 'material-ui/FlatButton';
 import Divider from 'material-ui/Divider';
-import cache from '../../../data/genres';
+import cache from '../../../data/genresCache';
 import axios from 'axios';
+
 
 
 console.log('genres cache is : ', cache)

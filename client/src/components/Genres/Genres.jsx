@@ -52,6 +52,7 @@ class Genres extends Component {
         <CardMedia
           expandable={true}
         >
+
         <GenresHeader />
         <GenresTable />        
         </CardMedia>
