@@ -10,12 +10,11 @@ import _ from 'underscore';
 const dataArr = _.keys(cache)
 
 
-
 const GamesHeader = (props) => {  
   return (
     <div className = "GamesHeader">
     <AutoComplete
-      floatingLabelText="Search for available games"
+      floatingLabelText="Search for available titles"
       filter={AutoComplete.fuzzyFilter}
       dataSource={dataArr}
       maxSearchResults={5}
