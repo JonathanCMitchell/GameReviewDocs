@@ -3,7 +3,7 @@ const searchGameModel = require('../models/search.game.model');
 
 const get = (req, res) => {
   console.log('inside searchGameController req.query is: ', req.query);
-    return searchGameModel.get(req.query)
+    searchGameModel.get(req.query)
     .then((game) => {
       // console.log('game in searchGameController: ', game)
       if (game) {

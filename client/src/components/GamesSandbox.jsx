@@ -3,8 +3,10 @@ import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
 import FlatButton from 'material-ui/FlatButton';
 import Divider from 'material-ui/Divider';
-import cache  from '../../data/cache';
+import cache from '../../data/cache';
 import axios from 'axios';
+
+
 class GamesSandbox extends Component {
   constructor(props) {
     super(props);
@@ -38,14 +40,14 @@ class GamesSandbox extends Component {
       const options = {};
       if (this.state.score_range)  options.score_range = this.state.score_range
       if (this.state.score)  options.score = this.state.score;
-      if (this.state.title)  options.title = this.state.title;
+      if (this.state.title !== '') options.title = this.state.title;
       if (this.state.release_year)  options.release_year = this.state.release_year;
       if (this.state.release_month)  options.release_month = this.state.release_month;
       if (this.state.release_day)  options.release_day = this.state.release_day;
       if (this.state.score)  options.score = this.state.score;
       if (this.state.score)  options.score = this.state.score;
       const url = '/api/search/games/';
-      axios.get(url, options)
+      axios.get(url, { params: options })
       .then((data) => {
         const received = JSON.stringify(data.data);
         this.setState({
@@ -147,7 +149,7 @@ class GamesSandbox extends Component {
   render() {
     return (
       <div className = "container-fluid">
-      <form className="games-form col-md-4 row" onSubmit={this.onFormSubmit}>
+      <form className="games-form col-md-4 row" >
         <Paper zDepth={0} className="games-docs">
         <TextField
             floatingLabelText="score_range"
@@ -179,7 +181,7 @@ class GamesSandbox extends Component {
             underlineShow={false}
           />
           <Divider />
-        <TextField
+          <TextField
             floatingLabelText="title"
             className="title-input-text"
             onChange={this.onTitleChange}
@@ -225,6 +227,7 @@ class GamesSandbox extends Component {
             label="Submit"
             labelStyle={{color: 'white'}}
             backgroundColor='#677077'
+            onClick = {this.onFormSubmit}
           />
       </form>
       <Paper zDepth={1} className={this.state.showResponse == true ? 

@@ -18,5 +18,5 @@ app.use(express.static('./client'));
 app.use('/api/search', searchRouter);
 
 app.get('/', (request, response) => response.sendFile('index.html'));
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3500);
 app.listen(app.get('port'), () => console.log('Server listening on port: ', app.get('port')));

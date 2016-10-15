@@ -3,12 +3,23 @@ import Paper from 'material-ui/Paper';
 import GamesTable from './GamesTable';
 import GamesSandbox from './GamesSandbox';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
+import AutoComplete from 'material-ui/AutoComplete';
+import cache from '../../data/cache.js'
+import _ from 'underscore';
+
+const dataArr = _.keys(cache)
+
 
 
 const GamesHeader = (props) => {  
   return (
     <div className = "GamesHeader">
-      <h1>This will be the GamesHeader</h1>
+    <AutoComplete
+      floatingLabelText="Search for available games"
+      filter={AutoComplete.fuzzyFilter}
+      dataSource={dataArr}
+      maxSearchResults={5}
+    />
     </div>
       )
 }
