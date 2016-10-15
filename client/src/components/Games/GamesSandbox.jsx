@@ -234,7 +234,7 @@ class GamesSandbox extends Component {
       </form>
       <Paper zDepth={1} className={this.state.showResponse == true ? 
         'games-response col-md-8' : 
-        'games-response-hidden'} 
+        'games-response-hidden col-md-8'} 
       >
       <p className="games-response-inside">{this.state.data}</p>
       </Paper>

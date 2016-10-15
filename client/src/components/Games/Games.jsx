@@ -59,9 +59,9 @@ class Games extends Component {
         </CardMedia>
         <CardTitle className="Card" title="Enter your parameters and try it out for yourself below." subtitle="Card subtitle" expandable={true} />
           <GamesSandbox expandable={true}/>
-        <CardActions>
-          <FlatButton label="Expand" onTouchTap={this.handleExpand} />
-          <FlatButton label="Reduce" onTouchTap={this.handleReduce} />
+        <CardActions className="Expander">
+          <FlatButton className="Expand-Flatbutton" label="Expand" onTouchTap={this.handleExpand} />
+          <FlatButton className="Reduce-Flatbutton" label="Reduce" onTouchTap={this.handleReduce} />
         </CardActions>
       </Card>
     );

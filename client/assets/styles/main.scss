@@ -1,6 +1,20 @@
 
 /* Color Themes */
 
+/* Primary Colors */ 
+
+$primary-color-dark:   #0288D1;
+$primary-color:        #03A9F4;
+$primary-color-light:  #B3E5FC;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #607D8B;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;
+
+$toggle-color: #00BcD4;
+$stripe-color: #CCF1F6;
+
 /* Purle Lime Green Theme */
 $lime-green-light: #68EFAD;
 $lime-green-accent: #3EFFA1;
@@ -19,13 +33,7 @@ $purple-dark: #691A99;
   background: purple;
 }
 
-table {
-  border: 1px solid gray;
-}
 
-td {
-    border: 1px solid gray;
-}
 
 p {
   overflow: scroll;
@@ -33,13 +41,13 @@ p {
 
 /* Card Header  */
 .Card-Header {
-background-color: $lime-green-accent
+background-color: $primary-color;
 }
 
 
 /* Sidebar */
 .Slidebar {
-background-color: $purple-dark
+background-color: $accent-color;
 }
 
 /* Searchbox */
@@ -53,9 +61,21 @@ background-color: $purple-dark
   
 }
 
+table {
+  border: 1px solid $divider-color;
+}
+
+td {
+    border: 1px solid $divider-color;
+
+}
+
+
+
 /* Card */
 .Card {
-  background-color: pink
+background-color: $stripe-color;
+text-align: center;
 }
 
 
@@ -66,12 +86,12 @@ background-color: $purple-dark
 
 /* Form */
 .Form {
-  background-color: $lime-green-accent;
+
 }
 
 /* Form inside */
 .Form-paper {
-  background-color: yellow
+
 }
 
 //color fixed
@@ -81,46 +101,23 @@ background-color: $purple-dark
 /* Response */
 .games-response {  
   width: 770px;
-  height: 539px;
+  height: 540px;
 }
 
 .games-response-hidden {  
   width: 770px;
-  height: 539px;
-  diplay:none;
+  height: 540px;
 }
 
 /* Response inside */
 .games-response-inside {
-  background-color: pink;
+  background: transparent;
   overflow: scroll;
   width: 740px;
   height: 509px;
 }
-/* 
-.games_response_inside {
-  background-color: rgb(122, 0, 38);
-  position: absolute;
-  left: 615px;
-  top: 1096px;
-  width: 740px;
-  height: 509px;
-  z-index: 17;
-} */
 
-
-/* Expander */
-
-// .games-response {
-//     width: 720px;
-//     height: 355px;
-//     display: flexbox;
-//     overflow: scroll;
-//     margin: 24px 279px;
-// }
 
 .games-response-hidden {
-  display: hidden
+  display: hidden;
 }
-
-/* Tables */
