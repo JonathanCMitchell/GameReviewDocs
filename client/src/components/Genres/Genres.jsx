@@ -3,6 +3,7 @@ import FlatButton from 'material-ui/FlatButton';
 import Paper from 'material-ui/Paper';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Toggle from 'material-ui/Toggle';
+import GenresTable from './GenresTable'
 
 class Genres extends Component {
   constructor(props) {
@@ -49,6 +50,7 @@ class Genres extends Component {
         <CardMedia
           expandable={true}
         >
+        <GenresTable />
         
         </CardMedia>
         <CardTitle title="Enter your parameters and try it out for yourself below." subtitle="Card subtitle" expandable={true} />
