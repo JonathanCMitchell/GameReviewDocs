@@ -53,11 +53,10 @@ class Genres extends Component {
           expandable={true}
         >
         <GenresHeader />
-        <GenresTable />
-        <GenresSandbox />
-        
+        <GenresTable />        
         </CardMedia>
         <CardTitle title="Enter your parameters and try it out for yourself below." subtitle="Card subtitle" expandable={true} />
+          <GenresSandbox expandable={true}/>
         <CardActions>
           <FlatButton label="Expand" onTouchTap={this.handleExpand} />
           <FlatButton label="Reduce" onTouchTap={this.handleReduce} />
