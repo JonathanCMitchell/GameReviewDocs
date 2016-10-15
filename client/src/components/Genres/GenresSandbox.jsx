@@ -18,12 +18,14 @@ class GenresSandbox extends Component {
       genre: '',
       score_range: '',
       score: '',
+      editors_choice: '',
       release_year: '',
       release_month: '',
       release_day: '',
       errorGenre: '',
       errorScoreRange: '',
       errorScore: '',
+      errorEditorsChoice: '',
       errorReleaseYear: '',
       errorReleaseMonth: '',
       errorReleaseDay: '',
@@ -48,8 +50,7 @@ class GenresSandbox extends Component {
       if (this.state.release_year)  options.release_year = this.state.release_year;
       if (this.state.release_month)  options.release_month = this.state.release_month;
       if (this.state.release_day)  options.release_day = this.state.release_day;
-      if (this.state.score)  options.score = this.state.score;
-      if (this.state.score)  options.score = this.state.score;
+      if (this.state.editors_choice) options.editors_choice = this.state.editors_choice;
       const url = '/api/search/genres/';
       axios.get(url, { params: options })
       .then((data) => {

@@ -5,6 +5,7 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import Toggle from 'material-ui/Toggle';
 import GenresTable from './GenresTable';
 import GenresSandbox from './GenresSandbox';
+import GenresHeader from './GenresHeader';
 
 class Genres extends Component {
   constructor(props) {
@@ -51,6 +52,7 @@ class Genres extends Component {
         <CardMedia
           expandable={true}
         >
+        <GenresHeader />
         <GenresTable />
         <GenresSandbox />
         
