@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import FlatButton from 'material-ui/FlatButton';
-import GamesTable from './GamesTable';
 import Paper from 'material-ui/Paper';
+import GamesTable from './GamesTable';
 import GamesSandbox from './GamesSandbox';
-
+import GamesHeader from './GamesHeader';
 
 
 
@@ -15,9 +15,8 @@ class Games extends Component {
   render() {
   return (
     <div>
+      <GamesHeader/>
       <GamesTable/>
-      <FlatButton label="Action1" />
-      <FlatButton label="Action2" />
       <GamesSandbox />
     </div>
       )
