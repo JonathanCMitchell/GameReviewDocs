@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import Games from './Games/Games';
-import Genres from './Genres';
+import Genres from './Genres/Genres';
+import Divider from 'material-ui/Divider';
 
 export default class Mainbar extends Component {
   render() {
@@ -9,6 +10,8 @@ export default class Mainbar extends Component {
       <div className="mainbar">
         <p>This is mainbar</p>
         <Games />
+        <Divider />
+        <Genres />
       </div>
     );
   }
