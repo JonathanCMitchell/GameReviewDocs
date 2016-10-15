@@ -5,14 +5,14 @@ import AutoComplete from 'material-ui/AutoComplete';
 import cache from '../../../data/genres.js'
 import _ from 'underscore';
 
-const dataArr = _.keys(cache)
+const dataArr = _.keys(cache);
 
 
 const GenresHeader = (props) => {  
   return (
     <div className = "GenresHeader">
     <AutoComplete
-      floatingLabelText="Search for available titles"
+      floatingLabelText="Search for available genres"
       filter={AutoComplete.fuzzyFilter}
       dataSource={dataArr}
       maxSearchResults={5}
