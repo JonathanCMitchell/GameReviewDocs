@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 import Divider from 'material-ui/Divider';
 import cache  from '../../data/cache';
 import axios from 'axios';
@@ -146,8 +146,8 @@ class GamesSandbox extends Component {
 
   render() {
     return (
-      <div>
-      <form className="games-form" onSubmit={this.onFormSubmit}>
+      <div className = "container-fluid">
+      <form className="games-form col-md-4 row" onSubmit={this.onFormSubmit}>
         <Paper zDepth={0} className="games-docs">
         <TextField
             floatingLabelText="score_range"
@@ -220,15 +220,17 @@ class GamesSandbox extends Component {
           />
           <Divider />
           </Paper>
-          <RaisedButton
+          <FlatButton className="col-md-6 col-md-offset-3"
             type="submit"
-            label="Sign In"
+            label="Submit"
             labelStyle={{color: 'white'}}
             backgroundColor='#677077'
           />
       </form>
-      <h1>Hello we are inside GamesSandbox</h1>
-      <Paper zDepth={1} className={this.state.showResponse == true ? 'games-response' : 'games-resopnse-hidden'} >
+      <Paper zDepth={1} className={this.state.showResponse == true ? 
+        'games-response col-md-8' : 
+        'games-resopnse-hidden'} 
+      >
       <p>{this.state.data}</p>
       </Paper>
       </div>
