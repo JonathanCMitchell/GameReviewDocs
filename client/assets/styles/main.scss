@@ -16,3 +16,14 @@ td {
     border: 1px solid gray;
 }
 
+.games-response {
+    width: 720px;
+    height: 355px;
+    display: flex;
+    overflow: scroll;
+    margin: 24px 279px;
+}
+
+.games-response-hidden {
+  display: hidden
+}

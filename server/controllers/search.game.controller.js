@@ -5,7 +5,7 @@ const get = (req, res) => {
   console.log('inside searchGameController req.query is: ', req.query);
     return searchGameModel.get(req.query)
     .then((game) => {
-      console.log('game in searchGameController: ', game)
+      // console.log('game in searchGameController: ', game)
       if (game) {
         res.status(200).send(game);
       }

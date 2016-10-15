@@ -22,6 +22,7 @@ class GamesSandbox extends Component {
       errorReleaseMonth: '',
       errorReleaseDay: '',
       data: '',
+      showResponse: false,
     };
     this.onTitleChange = this.onTitleChange.bind(this);
     this.onScoreRangeChange = this.onScoreRangeChange.bind(this);
@@ -46,25 +47,24 @@ class GamesSandbox extends Component {
       const url = '/api/search/games/';
       axios.get(url, options)
       .then((data) => {
-        const received = JSON.stringify(data.data)
+        const received = JSON.stringify(data.data);
         this.setState({
-          data: received
-        })
+          data: received,
+          showResponse: true,
+        });
       })
       .catch((err) => {
-        if (err) console.log('error in get: ', err)
-      })
+        if (err) console.log('error in get: ', err);
+      });
   }
 
 
   onTitleChange(event) {
-    const regex = /^[A-Z]/; // limits string length, min 1, max 50, letters only
     this.setState({
       title: event.target.value,
     });
-
+    // check cache to see if the item is available in the database;
     if (cache[event.target.value]) {
-    // if (regex.test(event.target.value)) {
       this.setState({ errorTitle: '' });
     }
     else {
@@ -73,7 +73,7 @@ class GamesSandbox extends Component {
   }
 
   onScoreRangeChange(event) {
-    const regex = /^[0-9], ([1-9]|10)$/g
+    const regex = /^[0-9], ([1-9]|10)$/g;
     this.setState({
       score_range: event.target.value,
     });
@@ -148,7 +148,7 @@ class GamesSandbox extends Component {
     return (
       <div>
       <form className="games-form" onSubmit={this.onFormSubmit}>
-        <Paper zDepth={1} className="games-docs">
+        <Paper zDepth={0} className="games-docs">
         <TextField
             floatingLabelText="score_range"
             className="score_range-input-text"
@@ -228,7 +228,9 @@ class GamesSandbox extends Component {
           />
       </form>
       <h1>Hello we are inside GamesSandbox</h1>
+      <Paper zDepth={1} className={this.state.showResponse == true ? 'games-response' : 'games-resopnse-hidden'} >
       <p>{this.state.data}</p>
+      </Paper>
       </div>
       );
   }
