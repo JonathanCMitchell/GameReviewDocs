@@ -14,7 +14,7 @@ searchGenreModel.get = (params) => {
   if (params.release_month) qs.release_month = params.release_month;
   if (params.release_day) qs.release_day = params.release_day;
   const options = {
-    uri: 'http://genrereviewapi.herokuapp.com/api/search/genres/',
+    uri: 'http://gamereviewapi.herokuapp.com/api/search/genres/',
     qs
   };
   return rp(options)

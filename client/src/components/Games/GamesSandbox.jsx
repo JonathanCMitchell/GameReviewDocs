@@ -193,7 +193,7 @@ class GamesSandbox extends Component {
           <Divider />
           <TextField
             floatingLabelText="release_year"
-            className="title-release_year-text"
+            className="release_year-input-text"
             onChange={this.onReleaseYearChange}
             value={this.state.release_year}
             hintText="Release Year"
@@ -203,7 +203,7 @@ class GamesSandbox extends Component {
           <Divider />
           <TextField
             floatingLabelText="release_month"
-            className="title-release_month-text"
+            className="release_month-input-text"
             onChange={this.onReleaseMonthChange}
             value={this.state.release_month}
             hintText="Release Month"
@@ -213,7 +213,7 @@ class GamesSandbox extends Component {
           <Divider />
           <TextField
             floatingLabelText="release_day"
-            className="title-release_day-text"
+            className="release_day-input-text"
             onChange={this.onReleaseDayChange}
             value={this.state.release_day}
             hintText="Release day"
