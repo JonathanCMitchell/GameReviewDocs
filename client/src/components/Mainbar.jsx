@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Games from './Games';
+import Games from './Games/Games';
 import Genres from './Genres';
 
 export default class Mainbar extends Component {

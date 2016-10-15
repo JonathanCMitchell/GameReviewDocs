@@ -7,30 +7,7 @@ import GamesHeader from './GamesHeader';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Toggle from 'material-ui/Toggle';
 
-// class Games extends Component {
-//   constructor(props) {
-//   super(props);
-//   this.state = {
-//     expanded: false
-//     };
-//   }
-
-//   render() {
-//   return (
-//     <div>
-//       <Card>
-//       <Cardheader >
-//       <GamesHeader/>
-//       </Cardheader>
-//       <GamesTable expandable={true}/>
-//       <GamesSandbox expandable={true}/>
-//       </Card>
-//     </div>
-//       )
-//   }
-// }
 class Games extends Component {
-
   constructor(props) {
     super(props);
     this.state = {

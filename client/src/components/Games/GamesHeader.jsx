@@ -4,7 +4,7 @@ import GamesTable from './GamesTable';
 import GamesSandbox from './GamesSandbox';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 import AutoComplete from 'material-ui/AutoComplete';
-import cache from '../../data/cache.js'
+import cache from '../../../data/cache.js'
 import _ from 'underscore';
 
 const dataArr = _.keys(cache)
