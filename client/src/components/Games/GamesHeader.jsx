@@ -12,7 +12,7 @@ const GamesHeader = (props) => {
   return (
     <div className = "GamesHeader">
     <AutoComplete
-      floatingLabelText="Search for available genres"
+      floatingLabelText="Search for available games"
       filter={AutoComplete.fuzzyFilter}
       dataSource={dataArr}
       maxSearchResults={5}
