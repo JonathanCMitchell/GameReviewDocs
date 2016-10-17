@@ -25,7 +25,7 @@ const PlatformsTable = (props) => {
         <TableRowColumn>String</TableRowColumn>
         <TableRowColumn>4, 6</TableRowColumn>
       </TableRow>
-      <TableRow>
+      <TableRow >
         <TableRowColumn>score</TableRowColumn>
         <TableRowColumn>Query</TableRowColumn>
         <TableRowColumn>Score (1 - 10)</TableRowColumn>
@@ -65,7 +65,7 @@ const PlatformsTable = (props) => {
         <TableRowColumn>Integer</TableRowColumn>
         <TableRowColumn>12</TableRowColumn>
       </TableRow>
-      <TableRow>
+      <TableRow striped={true}>
         <TableRowColumn>release_day</TableRowColumn>
         <TableRowColumn>Query</TableRowColumn>
         <TableRowColumn>Day of release</TableRowColumn>
