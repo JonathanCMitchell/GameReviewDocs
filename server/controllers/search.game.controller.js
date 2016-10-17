@@ -21,7 +21,7 @@ const get = (req, res) => {
 };
 
 exports.search = {
-  get
+  get: get,
 }
 
 
