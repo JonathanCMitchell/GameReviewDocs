@@ -1,9 +1,8 @@
 // endpoint /api/search/game
 const searchGameModel = require('../models/search.game.model');
 
-const searchGameController = module.exports;
 
-searchGameController.get = (req, res) => {
+const get = (req, res) => {
   console.log('inside searchGameController req.query is: ', req.query);
     searchGameModel.get(req.query)
     .then((game) => {
@@ -20,6 +19,10 @@ searchGameController.get = (req, res) => {
       }
     });
 };
+
+exports.search = {
+  get
+}
 
 
 

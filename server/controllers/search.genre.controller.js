@@ -1,9 +1,8 @@
 // endpoint /api/search/genre
 const searchGenreModel = require('../models/search.genre.model');
 
-const searchGenreController = module.exports
 
-searchGenreController.get = (req, res) => {
+const get = (req, res) => {
   console.log('inside searchGenreController req.query is: ', req.query);
     searchGenreModel.get(req.query)
     .then((genre) => {
@@ -21,4 +20,6 @@ searchGenreController.get = (req, res) => {
     });
 };
 
-
+exports.search = {
+  get
+}
