@@ -9,9 +9,6 @@ import axios from 'axios';
 
 
 
-console.log('genres cache is : ', cache)
-
-
 class GenresSandbox extends Component {
   constructor(props) {
     super(props);

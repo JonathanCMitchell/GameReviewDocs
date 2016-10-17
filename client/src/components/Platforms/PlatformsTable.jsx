@@ -55,7 +55,7 @@ const PlatformsTable = (props) => {
         <TableRowColumn>name of platform/console</TableRowColumn>
         <TableRowColumn>No</TableRowColumn>
         <TableRowColumn>String</TableRowColumn>
-        <TableRowColumn>Playstation</TableRowColumn>
+        <TableRowColumn>PlayStation</TableRowColumn>
       </TableRow>
       <TableRow striped={true}>
         <TableRowColumn>release_year</TableRowColumn>

@@ -9,7 +9,7 @@ import axios from 'axios';
 
 
 
-console.log('genres cache is : ', cache)
+console.log('platforms cache is : ', cache)
 
 
 class PlatformsSandbox extends Component {
@@ -52,7 +52,7 @@ class PlatformsSandbox extends Component {
       if (this.state.release_month)  options.release_month = this.state.release_month;
       if (this.state.release_day)  options.release_day = this.state.release_day;
       if (this.state.editors_choice) options.editors_choice = this.state.editors_choice;
-      const url = '/api/search/Platforms/';
+      const url = '/api/search/platforms/';
       axios.get(url, { params: options })
       .then((data) => {
         const received = JSON.stringify(data.data);
