@@ -5,7 +5,9 @@ import Genres from './Genres/Genres';
 import Platforms from './Platforms/Platforms';
 import Divider from 'material-ui/Divider';
 
-export default class Mainbar extends Component {
+
+
+class Mainbar extends Component {
   render() {
     return (
       <div className="mainbar">
@@ -18,3 +20,5 @@ export default class Mainbar extends Component {
     );
   }
 }
+
+export default Mainbar
