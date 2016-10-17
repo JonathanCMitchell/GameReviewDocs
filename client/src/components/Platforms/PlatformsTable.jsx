@@ -2,7 +2,7 @@ import React from 'react';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 
 
-const GenresTable = (props) => {
+const PlatformsTable = (props) => {
   return (
     <div className="Table-parameters">
       <Table>
@@ -50,12 +50,12 @@ const GenresTable = (props) => {
         <TableRowColumn>1</TableRowColumn>
       </TableRow>
       <TableRow>
-        <TableRowColumn>name</TableRowColumn>
+        <TableRowColumn>console_name</TableRowColumn>
         <TableRowColumn>Query</TableRowColumn>
-        <TableRowColumn>name of genre</TableRowColumn>
+        <TableRowColumn>name of platform/console</TableRowColumn>
         <TableRowColumn>No</TableRowColumn>
         <TableRowColumn>String</TableRowColumn>
-        <TableRowColumn>RPG</TableRowColumn>
+        <TableRowColumn>Playstation</TableRowColumn>
       </TableRow>
       <TableRow striped={true}>
         <TableRowColumn>release_year</TableRowColumn>
@@ -87,4 +87,4 @@ const GenresTable = (props) => {
       )
 }
 
-export default GenresTable;
+export default PlatformsTable;
