@@ -5,12 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/server.js"
-  },
-  "repository": {
-    "type": "git",
+    "start": "nodemon server/server.js",
     "postinstall": "webpack",
-    "url": "git+https://github.com/ConsoleGameApi/GameReviewDocs.git"
   },
   "author": "",
   "license": "ISC",
