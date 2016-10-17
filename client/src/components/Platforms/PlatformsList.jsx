@@ -57,7 +57,6 @@ class PlatformsList extends Component {
           onRequestClose={this.handleRequestClose}
         >
           <Menu>
-          <h1>Platforms list</h1>
             {this.renderList()}
           </Menu>
         </Popover>

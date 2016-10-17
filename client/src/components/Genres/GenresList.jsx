@@ -57,7 +57,6 @@ class GenresList extends Component {
           onRequestClose={this.handleRequestClose}
         >
           <Menu>
-          <h1>genres list</h1>
             {this.renderList()}
           </Menu>
         </Popover>
