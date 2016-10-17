@@ -10,8 +10,7 @@ import Divider from 'material-ui/Divider';
 class Mainbar extends Component {
   render() {
     return (
-      <div className="mainbar">
-        <p>This is mainbar</p>
+      <div className="Mainbar">
         <Games />
         <Divider />
         <Genres />

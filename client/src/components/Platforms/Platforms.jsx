@@ -35,7 +35,7 @@ class Platforms extends Component {
     return (
       <Card expanded={this.state.expanded} onExpandChange={this.handleExpandChange}>
         <CardHeader
-          title="/api/search/platforms"
+          title="http://gamereviewapi.herokuapp.com/api/search/platforms"
           subtitle="type: GET"
           avatar="../../assets/images/platform_icon.png" 
           actAsExpander={true}

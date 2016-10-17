@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Sidebar from './Sidebar';
+import Topbar from './Topbar';
 import Mainbar from './Mainbar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -12,9 +12,8 @@ class App extends Component {
     return (
     <MuiThemeProvider>
       <div>
-        <h1>Welcome to the documentation</h1>
-        <div className="container">
-        <Sidebar />
+        <div className="container-fluid">
+        <Topbar />
         <Mainbar />
         </div>
       </div>

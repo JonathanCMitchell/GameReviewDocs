@@ -35,7 +35,7 @@ class Genres extends Component {
     return (
       <Card expanded={this.state.expanded} onExpandChange={this.handleExpandChange}>
         <CardHeader
-          title="/api/search/genres"
+          title="http://gamereviewapi.herokuapp.com/api/search/genres"
           subtitle="type: GET"
           avatar="../../assets/images/sword_icon.png" 
           actAsExpander={true}
