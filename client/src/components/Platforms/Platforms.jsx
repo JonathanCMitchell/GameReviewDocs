@@ -4,7 +4,7 @@ import Paper from 'material-ui/Paper';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Toggle from 'material-ui/Toggle';
 import PlatformsTable from './PlatformsTable';
-
+import PlatformsSandbox from './PlatformsSandbox';
 
 class Platforms extends Component {
   constructor(props) {
@@ -55,6 +55,7 @@ class Platforms extends Component {
         <PlatformsTable />
         </CardMedia>
         <CardTitle className="Card" title="Enter your parameters and try it out for yourself below." subtitle="Card subtitle" expandable={true} />
+          <PlatformsSandbox />
         <CardActions className="Expander">
           <FlatButton className="Expand-Flatbutton" label="Expand" onTouchTap={this.handleExpand} />
           <FlatButton className="Reduce-Flatbutton" label="Reduce" onTouchTap={this.handleReduce} />
