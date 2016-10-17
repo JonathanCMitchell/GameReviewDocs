@@ -14,7 +14,8 @@ app.use(express.static('./client'));
 
 app.get('/', (request, response) => response.sendFile('index.html'));
 
-require('./router/search.router.js')(app, express);
+// console.log('abs path to route: ', path.join(__dirname,'/router/search.router.js'));
+require(path.join(__dirname,'/router/search.router.js'))(app, express);
 
 app.set('port', process.env.PORT || 3500);
 app.listen(app.get('port'), () => console.log('Server listening on port: ', app.get('port')));
