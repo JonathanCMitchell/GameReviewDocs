@@ -5,7 +5,7 @@ const searchGenreController = require('../controllers/search.genre.controller');
 const searchPlatformController = require('../controllers/search.platform.controller');
 
 router.get('/games', searchGameController.get);
-router.get('/genres', searchGenreController.search.get);
-router.get('/platforms', searchPlatformController.search.get);
+router.get('/genres', searchGenreController.get);
+router.get('/platforms', searchPlatformController.get);
 
 module.exports = router
