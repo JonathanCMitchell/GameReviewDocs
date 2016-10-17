@@ -3,7 +3,7 @@ const searchGenreModel = module.exports;
 
 
 searchGenreModel.get = (params) => {
-  console.log('params inside searchGenreModel: ', params);
+  // console.log('params inside searchGenreModel: ', params);
   const qs = {}
   if (params.name) qs.name = params.name;
   if (params.score_range) qs.score_range = params.score_range;

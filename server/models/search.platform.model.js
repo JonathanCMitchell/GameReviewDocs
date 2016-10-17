@@ -3,7 +3,7 @@ const searchPlatformModel = module.exports;
 
 
 searchPlatformModel.get = (params) => {
-  console.log('params inside searchPlatformModel: ', params);
+  // console.log('params inside searchPlatformModel: ', params);
   const qs = {}
   if (params.console_name) qs.console_name = params.console_name;
   if (params.score_range) qs.score_range = params.score_range;

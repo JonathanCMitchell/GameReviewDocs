@@ -59,7 +59,10 @@ class GenresSandbox extends Component {
         });
       })
       .catch((err) => {
-        if (err) console.log('error in get: ', err);
+        if (err) {
+          console.log('error in get: ', err);
+          this.setState({ data: 'Try different query params' });
+        }
       });
   }
 

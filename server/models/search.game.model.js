@@ -3,7 +3,7 @@ const searchGameModel = module.exports;
 
 
 searchGameModel.get = (params) => {
-  console.log('params inside searchGameModel: ', params);
+  // console.log('params inside searchGameModel: ', params);
   const qs = {}
   if (params.title) qs.title = params.title;
   if (params.score_range) qs.score_range = params.score_range;

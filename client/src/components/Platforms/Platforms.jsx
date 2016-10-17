@@ -5,6 +5,7 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import Toggle from 'material-ui/Toggle';
 import PlatformsTable from './PlatformsTable';
 import PlatformsSandbox from './PlatformsSandbox';
+import PlatformsSearchbox from './PlatformsSearchbox';
 
 class Platforms extends Component {
   constructor(props) {
@@ -52,10 +53,11 @@ class Platforms extends Component {
         <CardMedia
           expandable={true}
         >
+        <PlatformsSearchbox />
         <PlatformsTable />
         </CardMedia>
         <CardTitle className="Card" title="Enter your parameters and try it out for yourself below." subtitle="Card subtitle" expandable={true} />
-          <PlatformsSandbox />
+          <PlatformsSandbox expandable={true} />
         <CardActions className="Expander">
           <FlatButton className="Expand-Flatbutton" label="Expand" onTouchTap={this.handleExpand} />
           <FlatButton className="Reduce-Flatbutton" label="Reduce" onTouchTap={this.handleReduce} />

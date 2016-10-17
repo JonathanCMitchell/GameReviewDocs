@@ -5,7 +5,7 @@ const get = (req, res) => {
   console.log('inside searchPlatformController req.query is: ', req.query);
     searchPlatformModel.get(req.query)
     .then((platform) => {
-      console.log('platform in searchplatformController: ', platform)
+      // console.log('platform in searchplatformController: ', platform)
       if (platform) {
         res.status(200).send(platform);
       }

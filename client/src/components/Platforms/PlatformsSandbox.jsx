@@ -8,10 +8,6 @@ import cache from '../../../data/platformsCache';
 import axios from 'axios';
 
 
-
-console.log('platforms cache is : ', cache)
-
-
 class PlatformsSandbox extends Component {
   constructor(props) {
     super(props);
@@ -62,7 +58,10 @@ class PlatformsSandbox extends Component {
         });
       })
       .catch((err) => {
-        if (err) console.log('error in get: ', err);
+        if (err) {
+          console.log('error in get: ', err);
+          this.setState({ data: 'Try different query params' });
+        }
       });
   }
 
@@ -188,7 +187,7 @@ class PlatformsSandbox extends Component {
           />
           <Divider />
           <TextField
-            floatingLabelText="platform"
+            floatingLabelText="console_name"
             className="platform-input-text"
             onChange={this.onPlatformChange}
             value={this.state.platform}

@@ -109,6 +109,11 @@ text-align: center;
   height: 540px;
 }
 
+.platforms-response {
+  width: 770px;
+  height: 540px;
+}
+
 .games-response-hidden {  
   width: 770px;
   height: 540px;
@@ -121,6 +126,11 @@ text-align: center;
   display: hidden;
 }
 
+.platforms-response-hidden {
+  width: 770px;
+  height: 540px;
+  display: hidden;
+}
 /* Response inside */
 .games-response-inside {
   background: transparent;
@@ -130,6 +140,13 @@ text-align: center;
 }
 
 .genres-response-inside {
+  background: transparent;
+  overflow: scroll;
+  width: 740px;
+  height: 509px;
+}
+
+.platforms-response-inside {
   background: transparent;
   overflow: scroll;
   width: 740px;
