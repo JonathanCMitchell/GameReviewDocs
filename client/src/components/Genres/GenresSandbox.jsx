@@ -154,9 +154,9 @@ class GenresSandbox extends Component {
 
   render() {
     return (
-      <div className = "container-fluid">
-      <form className="genres-form col-md-4 row" >
-        <Paper zDepth={0} className="genres-docs">
+      <div className = "container-fluid Sandbox">
+      <form className="Form col-md-4 row" >
+        <Paper zDepth={0} className="Form-paper">
         <TextField
             floatingLabelText="score_range"
             className="score_range-input-text"
@@ -238,9 +238,9 @@ class GenresSandbox extends Component {
       </form>
       <Paper zDepth={1} className={this.state.showResponse == true ? 
         'genres-response col-md-8' : 
-        'genres-resopnse-hidden'} 
+        'genres-resopnse-hidden col-md-8'} 
       >
-      <p>{this.state.data}</p>
+      <p className="genres-response-inside">{this.state.data}</p>
       </Paper>
       </div>
       );

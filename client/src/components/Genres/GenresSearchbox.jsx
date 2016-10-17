@@ -9,9 +9,9 @@ import GenresList from './GenresList'
 const dataArr = _.keys(cache);
 
 
-const GenresHeader = (props) => {  
+const GenresSearchbox = (props) => {  
   return (
-    <div className = "GenresHeader row">
+    <div className = "Searchbox row">
     <AutoComplete
       floatingLabelText="Search for available genres"
       filter={AutoComplete.fuzzyFilter}
@@ -19,9 +19,9 @@ const GenresHeader = (props) => {
       maxSearchResults={5}
       className="col-md-2"
     />
-    <GenresList className="row col-md-4 col-md-offset-2"/>
+    <GenresList className="Searchbox-List row col-md-4 col-md-offset-2"/>
     </div>
       )
 }
 
-export default GenresHeader;
+export default GenresSearchbox;

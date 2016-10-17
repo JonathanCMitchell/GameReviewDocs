@@ -5,7 +5,7 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import Toggle from 'material-ui/Toggle';
 import GenresTable from './GenresTable';
 import GenresSandbox from './GenresSandbox';
-import GenresHeader from './GenresHeader';
+import GenresSearchbox from './GenresSearchbox';
 
 class Genres extends Component {
   constructor(props) {
@@ -40,8 +40,9 @@ class Genres extends Component {
           avatar="../../assets/images/sword_icon.png" 
           actAsExpander={true}
           showExpandableButton={true}
+          className="Card-Header"
         />
-        <CardText>
+        <CardText className="Slidebar">
           <Toggle
             toggled={this.state.expanded}
             onToggle={this.handleToggle}
@@ -53,14 +54,14 @@ class Genres extends Component {
           expandable={true}
         >
 
-        <GenresHeader />
+        <GenresSearchbox />
         <GenresTable />        
         </CardMedia>
-        <CardTitle title="Enter your parameters and try it out for yourself below." subtitle="Card subtitle" expandable={true} />
+        <CardTitle className="Card" title="Enter your parameters and try it out for yourself below." subtitle="Card subtitle" expandable={true} />
           <GenresSandbox expandable={true}/>
-        <CardActions>
-          <FlatButton label="Expand" onTouchTap={this.handleExpand} />
-          <FlatButton label="Reduce" onTouchTap={this.handleReduce} />
+        <CardActions className="Expander">
+          <FlatButton className="Expand-Flatbutton" label="Expand" onTouchTap={this.handleExpand} />
+          <FlatButton className="Reduce-Flatbutton" label="Reduce" onTouchTap={this.handleReduce} />
         </CardActions>
       </Card>
     );
