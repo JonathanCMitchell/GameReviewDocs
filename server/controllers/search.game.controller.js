@@ -2,7 +2,7 @@
 const searchGameModel = require('../models/search.game.model');
 
 
-const get = (req, res) => {
+function get(req, res) {
   console.log('inside searchGameController req.query is: ', req.query);
     searchGameModel.get(req.query)
     .then((game) => {
@@ -18,11 +18,11 @@ const get = (req, res) => {
         res.status(500).end(error);
       }
     });
-};
+}
 
 exports.search = {
   get: get,
-}
+};
 
 
 

@@ -1,7 +1,7 @@
 // endpoint /api/search/platform
 const searchPlatformModel = require('../models/search.platform.model');
 
-const get = (req, res) => {
+function get(req, res) {
   console.log('inside searchPlatformController req.query is: ', req.query);
     searchPlatformModel.get(req.query)
     .then((platform) => {
@@ -17,7 +17,7 @@ const get = (req, res) => {
         res.status(500).end(error);
       }
     });
-};
+}
 
 exports.search = {
   get

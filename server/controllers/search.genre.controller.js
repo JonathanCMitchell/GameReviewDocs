@@ -2,7 +2,7 @@
 const searchGenreModel = require('../models/search.genre.model');
 
 
-const get = (req, res) => {
+function get(req, res) {
   console.log('inside searchGenreController req.query is: ', req.query);
     searchGenreModel.get(req.query)
     .then((genre) => {
@@ -18,7 +18,7 @@ const get = (req, res) => {
         res.status(500).end(error);
       }
     });
-};
+}
 
 exports.search = {
   get
