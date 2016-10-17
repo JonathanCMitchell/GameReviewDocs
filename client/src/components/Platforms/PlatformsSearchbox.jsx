@@ -4,6 +4,7 @@ import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColu
 import AutoComplete from 'material-ui/AutoComplete';
 import cache from '../../../data/platformsCache.js'
 import _ from 'underscore';
+import PlatformsList from './PlatformsList'
 
 const dataArr = _.keys(cache);
 
@@ -18,6 +19,7 @@ const PlatformsSearchbox = (props) => {
       maxSearchResults={5}
       className="col-md-2"
     />
+    <PlatformsList Searchbox-List row col-md-4 col-md-offset-2/>
     </div>
       )
 }
