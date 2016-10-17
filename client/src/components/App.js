@@ -12,7 +12,7 @@ class App extends Component {
     return (
     <MuiThemeProvider>
       <div>
-        <div className="container-fluid">
+        <div className="container">
         <Topbar />
         <Mainbar />
         </div>

@@ -44,10 +44,10 @@ class PlatformsList extends Component {
   }
   render() {
     return (
-      <div className="PlatformsList">
+      <div className="PlatformList">
       <FlatButton
           onTouchTap={this.handleTouchTap}
-          label="Click me"
+          label="Click me to search for platforms"
         />
          <Popover
           open={this.state.open}

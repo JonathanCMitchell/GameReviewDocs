@@ -57,7 +57,17 @@ class Games extends Component {
         <GamesSearchbox/>
          <GamesTable/>
         </CardMedia>
-        <CardTitle className="Card" title="Enter your parameters and try it out for yourself below." subtitle="Card subtitle" expandable={true} />
+        <CardTitle className="Card" 
+        title="Enter your parameters and try it out for yourself below." 
+        subtitle="Please see rules below: " 
+        expandable={true} />
+          <CardText className="Card-Explanation text-center" expandable={true}>
+            <p>Every parameter is optional.</p>
+            <p>You may specify either score or score_range but not both.</p>
+            <p>If you specify both parameters, score will take precedence.</p>
+            <p>You may omit any parameter, such as include release_day but ommit release_year.</p>
+            <p>If you are searching by title, you do not have to use any other parameter.</p>
+          </CardText>
           <GamesSandbox expandable={true}/>
         <CardActions className="Expander">
           <FlatButton className="Expand-Flatbutton" label="Expand" onTouchTap={this.handleExpand} />

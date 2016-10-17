@@ -47,7 +47,7 @@ class GenresList extends Component {
       <div className="GenresList">
       <FlatButton
           onTouchTap={this.handleTouchTap}
-          label="Click me"
+          label="Click me to search for genres"
         />
          <Popover
           open={this.state.open}

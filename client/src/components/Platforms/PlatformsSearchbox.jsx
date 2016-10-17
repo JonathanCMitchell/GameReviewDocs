@@ -11,15 +11,15 @@ const dataArr = _.keys(cache);
 
 const PlatformsSearchbox = (props) => {  
   return (
-    <div className = "Searchbox row">
+    <div className = "Searchbox container-fluid">
     <AutoComplete
       floatingLabelText="Search for available Platforms"
       filter={AutoComplete.fuzzyFilter}
       dataSource={dataArr}
       maxSearchResults={5}
-      className="col-md-2"
+      className="AutoComplete"
     />
-    <PlatformsList Searchbox-List row col-md-4 col-md-offset-2/>
+    <PlatformsList Searchbox-List/>
     </div>
       )
 }

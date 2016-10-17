@@ -11,16 +11,18 @@ const dataArr = _.keys(cache);
 
 const GenresSearchbox = (props) => {  
   return (
-    <div className = "Searchbox row">
-    <AutoComplete
-      floatingLabelText="Search for available genres"
-      filter={AutoComplete.fuzzyFilter}
-      dataSource={dataArr}
-      maxSearchResults={5}
-      className="col-md-2"
-    />
-    <GenresList className="Searchbox-List row col-md-4 col-md-offset-2"/>
+  <div className = "Searchbox container-fluid">
+    <div className="row">
+          <AutoComplete
+          floatingLabelText="Search for available genres"
+          filter={AutoComplete.fuzzyFilter}
+          dataSource={dataArr}
+          maxSearchResults={5}
+          className="AutoComplete"
+        />
+        <GenresList className="Searchbox-List"/>
     </div>
+   </div>
       )
 }
 

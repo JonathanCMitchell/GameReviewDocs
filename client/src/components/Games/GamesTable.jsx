@@ -17,19 +17,11 @@ const GamesTable = (props) => {
       </TableRow>
     </TableHeader>
       <TableBody displayRowCheckbox={false} stripedRows={true}>
-      <TableRow >
-        <TableRowColumn>key</TableRowColumn>
-        <TableRowColumn>Query</TableRowColumn>
-        <TableRowColumn>API_KEY</TableRowColumn>
-        <TableRowColumn>Yes</TableRowColumn>
-        <TableRowColumn>Integer</TableRowColumn>
-        <TableRowColumn>11111</TableRowColumn>
-      </TableRow>
       <TableRow striped={true}>
         <TableRowColumn>score_range</TableRowColumn>
         <TableRowColumn>Query</TableRowColumn>
         <TableRowColumn>Range (1 - 10)</TableRowColumn>
-        <TableRowColumn>Yes</TableRowColumn>
+        <TableRowColumn>No</TableRowColumn>
         <TableRowColumn>String</TableRowColumn>
         <TableRowColumn>4, 6</TableRowColumn>
       </TableRow>
@@ -37,7 +29,7 @@ const GamesTable = (props) => {
         <TableRowColumn>score</TableRowColumn>
         <TableRowColumn>Query</TableRowColumn>
         <TableRowColumn>Score (1 - 10)</TableRowColumn>
-        <TableRowColumn>Yes</TableRowColumn>
+        <TableRowColumn>No</TableRowColumn>
         <TableRowColumn>String</TableRowColumn>
         <TableRowColumn>9</TableRowColumn>
       </TableRow>

@@ -188,7 +188,7 @@ class GenresSandbox extends Component {
           />
           <Divider />
           <TextField
-            floatingLabelText="genre"
+            floatingLabelText="name"
             className="genre-input-text"
             onChange={this.onGenreChange}
             value={this.state.genre}

@@ -55,6 +55,21 @@ background-color: $accent-color;
 
 }
 
+.Searchbox-list {
+  display: inline-block;
+}
+.GenresList {
+  display: inline-block;
+}
+
+.PlatformList {
+  display: inline-block;
+}
+
+.AutoComplete {
+  display:inline-block;
+}
+
 /* Table */
 .Table-parameters {
   
@@ -77,6 +92,12 @@ td {
 background-color: $stripe-color;
 text-align: center;
 }
+
+.Card-Explanation {
+
+}
+
+
 
 
 /* Sandbox */
@@ -151,6 +172,10 @@ text-align: center;
   overflow: scroll;
   width: 740px;
   height: 509px;
+}
+
+.genre-list {
+
 }
 
 
