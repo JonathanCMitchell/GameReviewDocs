@@ -14,7 +14,7 @@ searchGameModel.get = (params) => {
   if (params.release_day) qs.release_day = parseInt(params.release_day);
   const options = {
     uri: 'http://gamereviewapi.herokuapp.com/api/search/games/',
-    qs
+    qs: qs,
   };
   return rp(options)
     .then(function (result) {
