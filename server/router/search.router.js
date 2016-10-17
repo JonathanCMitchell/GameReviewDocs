@@ -4,7 +4,7 @@ const searchGameController = require('../controllers/search.game.controller');
 const searchGenreController = require('../controllers/search.genre.controller');
 const searchPlatformController = require('../controllers/search.platform.controller');
 
-router.get('/games', searchGameController.search.get);
+router.get('/games', searchGameController.get);
 router.get('/genres', searchGenreController.search.get);
 router.get('/platforms', searchPlatformController.search.get);
 
