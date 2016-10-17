@@ -238,7 +238,7 @@ class GenresSandbox extends Component {
       </form>
       <Paper zDepth={1} className={this.state.showResponse == true ? 
         'genres-response col-md-8' : 
-        'genres-resopnse-hidden col-md-8'} 
+        'genres-response-hidden col-md-8'} 
       >
       <p className="genres-response-inside">{this.state.data}</p>
       </Paper>
